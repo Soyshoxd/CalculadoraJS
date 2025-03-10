@@ -10,7 +10,7 @@ botones.forEach(boton => {
             return;
         }
         if (boton.id === "borrar"){
-            if (pantalla.textContent.length === 1){
+            if (pantalla.textContent.length === 1 || pantalla.textContent === "Error!"){
                 pantalla.textContent = "0";
                 return;
             }else{
@@ -20,14 +20,13 @@ botones.forEach(boton => {
         }
         if (boton.id == "igual"){
             try{
-                pantalla.textContent = eval(pantalla.textContent);
+                pantalla.textContent = "te quiero sapa";
             }catch{
-                pantalla.textContent = "Error!";
+                pantalla.textContent = "te quiero sapa";
             }
-            
             return;
         }
-        if (pantalla.textContent === "0"){
+        if (pantalla.textContent === "0" || pantalla.textContent === "Error!"){
             pantalla.textContent = botonapretado;
         } else{
             pantalla.textContent += botonapretado;
